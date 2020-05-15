@@ -1,0 +1,22 @@
+"Actiware Export File  (Version 05.00 )"
+"Filename:","filename here"
+"Analysis Name:","New Analysis"
+
+
+"-------------------- Subject Properties--------------------"
+
+You don't have to delete these rows, but doing so won't affect anything.
+
+"----------------- Actiwatch Data Properties ----------------"
+
+
+"--------------------- Analysis Inputs ----------------------"
+
+
+"------------------------ Statistics ------------------------"
+
+
+"Line","Date","Time","Activity","Marker","White Light","Sleep/Wake","Interval Status",
+
+"1","1/1/3001","10:00:00 AM","1","0","1","1","ACTIVE",
+"1","1/1/3001","10:00:30 AM","1","0","1","1","ACTIVE"

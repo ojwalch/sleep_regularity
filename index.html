@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sleep Regularity Index Calculator</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sleep_regularity.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Sleep Regularity Index Calculator</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="http://www.github.com/ojwalch/sleep_regularity">Source Code</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-6 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5">Calculate sleep regularity index from actigraphy files</h1>
+            <div class="upload-wrapper">
+                <header>
+                    <label class="btn btn-outline btn-xl">
+
+                    <input type="file" multiple="multiple" onchange="showFile()">
+                        Upload csv files
+                        </label>
+                        </header>
+                <div id="show-text"></div>
+            </div>
+            
+            
+          </div>
+        </div>
+        <div class="col-lg-6 my-auto">
+            <div class="summary" id="summary" style="width: 100%; overflow: auto; height: 400px;"></div>
+        </div>
+      </div>
+    </div>
+
+  <section class="about text-center" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h2 class="section-heading">About</h2>
+          <p>This website reads actigraphy data files (in csv format) to calculate the <a href="https://www.nature.com/articles/s41598-017-03171-4">sleep regularity index</a> for each participant.
+              You can download the template for your actigraphy data <a href="template.csv">here</a> and sample data <a href="sample.csv">here</a>. We don't store any of the data you upload. </p>
+            <br><br>
+            Phillips, A.J.K., Clerx, W.M., O’Brien, C.S. et al. Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. Sci Rep 7, 3216 (2017). https://doi.org/10.1038/s41598-017-03171-4
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Code used to make calculations available <a href="http://www.github.com/ojwalch/sleep_regularity">on Github</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/styles.js"></script>
+
+  <script type="text/javascript" src="js/read_file.js"></script>
+
+</body>
+
+</html>
