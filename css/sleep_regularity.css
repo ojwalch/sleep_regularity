@@ -235,6 +235,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
     letter-spacing: 4px;
     text-transform: uppercase;
+     align-content: center;
+
 }
 
 .btn-xl {
@@ -248,3 +250,6 @@ input[type="file"] {
     color: darkcyan;
 }
 
+.upload-wrapper{
+        padding: 25px 0;
+}
