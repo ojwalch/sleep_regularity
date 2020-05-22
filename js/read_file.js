@@ -25,10 +25,11 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
             var file = files[j];
             let filename = file.name;
 
-            var reader = new FileReader()
-            var textFile = /text.*/;
+            var reader = new FileReader();
+            var excelFile = /application.*/;
 
-            if (file.type.match(textFile)) {
+            console.log(file);
+            if (file.type.match(textFile) || file.type.match(excelFile)) {
 
                 reader.onload = function (event) {
 
