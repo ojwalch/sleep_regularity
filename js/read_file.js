@@ -26,6 +26,8 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
             let filename = file.name;
 
             var reader = new FileReader();
+            var textFile = /text.*/;
+
             var excelFile = /application.*/;
 
             console.log(file);
