@@ -13,15 +13,17 @@ function processRawData(rawData) {
     let hasBeenNonzeroYet = 0;
     let cutoff_index = -1;
     let cuton_index = -1;
+    console.log(splitByLines.length);
+
     for (let i = 1; i < splitByLines.length; i++) {
         let row = splitByLines[i].split(",");
-        
+
         for( let j = 0; j < row.length; j++){
-            row[j] = row[j].replace('\"', ''); 
-            row[j] = row[j].replace('\"', ''); 
+            row[j] = row[j].replace('\"', '');
+            row[j] = row[j].replace('\"', '');
         }
 
-        if (row.length == 9 && row[7] == "Interval Status"){
+        if (row.length == 8 && row[7] == "Interval Status"){
             keyRow = i + 2;
         }
 
@@ -55,7 +57,8 @@ function processRawData(rawData) {
 
     //         if cutoff_index == -1:
     //         cutoff_index = (epoch.length)-1
-
+    console.log(dates);
+    console.log(sleepWake);
     return {dates, times, sleepWake, epoch}
 }
 
@@ -76,11 +79,11 @@ function getSRI(sleepWake, epoch){
             if (current_sleep_wake == next_sleep_wake){
                 counter = counter + 1.0;
             }
-        }   
+        }
     }
     let sri = 100*counter/total;
-    
-    return {sri}     
+
+    return {sri}
 }
 
 onmessage = function (e) {
