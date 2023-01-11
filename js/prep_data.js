@@ -8,29 +8,24 @@ function processRawData(rawData) {
     let sleepWake = [];
     let epoch = [];
 
-    let keyRow = 999999999;
+    let keyRow = 0;
     let zeroCounter = 0;
     let hasBeenNonzeroYet = 0;
     let cutoff_index = -1;
     let cuton_index = -1;
     console.log(splitByLines.length);
-
     for (let i = 1; i < splitByLines.length; i++) {
         let row = splitByLines[i].split(",");
-
         for( let j = 0; j < row.length; j++){
             row[j] = row[j].replace('\"', '');
             row[j] = row[j].replace('\"', '');
         }
 
-        if (row.length == 8 && row[7] == "Interval Status"){
-            keyRow = i + 2;
-        }
-
         if (i > keyRow && cutoff_index == -1){
+            console.log("here");
             if (row.length > 6){
                 if (row[3] != "NaN" && row[0] != "NaN" && row[6] != "NaN"){
-                    dates[i] = row[0];
+                    dates[i] = row[1];
                     times[i] = row[2];
                     sleepWake[i] = parseFloat(row[6]);
                     epoch[i] = parseFloat(row[0]);
